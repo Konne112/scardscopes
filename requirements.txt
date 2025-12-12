@@ -1,0 +1,5 @@
+Flask
+Flask_SQLAlchemy
+requests
+qrcode
+gunicorn
