@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Login – ScardScopes</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      border: 1px solid #333;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #000;
+      color: #eee;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #c9a85c;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .error {
+      color: #ff6666;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+
+  <form method="POST">
+    <input type="text" name="username" placeholder="Benutzername" required>
+    <input type="password" name="password" placeholder="Passwort" required>
+    <button type="submit">Einloggen</button>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+  </form>
+</div>
+
+</body>
+</html>
